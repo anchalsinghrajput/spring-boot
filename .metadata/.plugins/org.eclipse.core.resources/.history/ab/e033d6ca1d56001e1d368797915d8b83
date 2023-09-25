@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mathCourse" class="com.infosys.anchal.assignment.Course">
+        <constructor-arg value="1" />
+        <constructor-arg value="Mathematics" />
+    </bean>
+
+    <bean id="csCourse" class="com.infosys.anchal.assignment.Course">
+        <constructor-arg value="2" />
+        <constructor-arg value="Computer Science" />
+    </bean>
+
+    <bean id="student1" class="com.infosys.anchal.assignment.Student">
+        <constructor-arg value="1" />
+        <constructor-arg value="Alice" />
+        <constructor-arg value="101" />
+        <constructor-arg>
+            <list>
+                <ref bean="mathCourse" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="student2" class="com.infosys.anchal.assignment.Student">
+        <constructor-arg value="2" />
+        <constructor-arg value="Bob" />
+        <constructor-arg value="102" />
+        <constructor-arg>
+            <list>
+                <ref bean="csCourse" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="universityService" class="com.infosys.anchal.assignment.UniversityServices" />
+
+</beans>

@@ -1,0 +1,27 @@
+package com.infosys.anchal.assignment_02_2;
+
+import com.infosys.anchal.beans.CustomerDetail;
+import com.infosys.anchal.beans.ProductDetail;
+import com.infosys.anchal.services.Electronics;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class App {
+    public static void main(String[] args) {
+        ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+        Electronics electronics = context.getBean(Electronics.class);
+
+      
+        CustomerDetail customer1 = new CustomerDetail();
+        customer1.setCustomerName("Alice");
+        customer1.setAge(30);
+
+        ProductDetail product1 = new ProductDetail();
+        product1.setProductName("Laptop");
+        product1.setQuantity(2);
+
+        electronics.placeOrder(customer1, product1);
+
+        electronics.displayOrders();
+    }
+}

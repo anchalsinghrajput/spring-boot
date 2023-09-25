@@ -1,0 +1,8 @@
+package com.infosys.anchal.config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class Config {
+
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define the Book instances -->
+    <bean id="book1" class="com.infosys.anchal.assignment.Book">
+        <property name="id" value="1" />
+        <property name="title" value="Harry Potter" />
+        <property name="author" value="Rowling hawking" />
+    </bean>
+
+    <bean id="book2" class="com.infosys.anchal.assignment.Book">
+        <property name="id" value="2" />
+        <property name="title" value="Book 2" />
+        <property name="author" value="Author 2" />
+    </bean>
+
+    <!-- Define the LibraryService instance and inject the list of books -->
+    <bean id="libraryService" class="com.infosys.anchal.assignment.LibraryService">
+        <property name="books">
+            <list>
+                <ref bean="book1" />
+                <ref bean="book2" />
+            </list>
+        </property>
+    </bean>
+</beans>

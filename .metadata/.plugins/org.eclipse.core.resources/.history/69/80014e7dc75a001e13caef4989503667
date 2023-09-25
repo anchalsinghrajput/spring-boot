@@ -1,0 +1,44 @@
+package com.infosys.anchal.config;
+import com.infosys.anchal.beans.CustomerDetail;
+import com.infosys.anchal.beans.ProductDetail;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan("com.infosys.anchal.services")
+public class Config {
+	
+    @Bean(name = "Alice")
+    public CustomerDetail customer1() {
+        CustomerDetail customer1 = new CustomerDetail();
+        customer1.setCustomerName("Alice");
+        customer1.setAge(30);
+        return customer1;
+    }
+
+    @Bean(name = "Anchal")
+    public CustomerDetail customer2() {
+        CustomerDetail customer2 = new CustomerDetail();
+        customer2.setCustomerName("Anchal");
+        customer2.setAge(21);
+        return customer2;
+    }
+    
+    @Bean(name = "Laptop")
+    public ProductDetail product1() {
+        ProductDetail product1 = new ProductDetail();
+        product1.setProductName("Laptop");
+        product1.setQuantity(2);
+        return product1;
+    }
+    
+    @Bean(name = "Ipad")
+    public ProductDetail product2() {
+        ProductDetail product2 = new ProductDetail();
+        product2.setProductName("Ipad");
+        product2.setQuantity(1);
+        return product2;
+    }
+    
+}

@@ -1,0 +1,33 @@
+package com.infosys.anchal.assignment;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class UniversityServices {
+	
+	private Map<Integer, Student> students = new HashMap();
+	private List<Course> courses = new ArrayList<>();
+
+	public void addCourse(Course course) {
+	        courses.add(course);
+	}
+	
+	public void addStudent(Student student) {
+        students.put(student.getId(), student);
+    }
+
+	public void displayStudentCourses(int studentId) {
+        Student student = students.get(studentId);
+        if (student != null) {
+            System.out.println("Student Name: " + student.getName());
+            System.out.println("Enrolled Courses:");
+            for (Course course : student.getCourses()) {
+                System.out.println("Course ID: " + course.getId() + ", Name: " + course.getName());
+            }
+        } else {
+            System.out.println("Student not found.");
+        }
+    }
+}

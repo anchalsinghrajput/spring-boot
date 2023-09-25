@@ -1,0 +1,6 @@
+package com.infosys.anchal.config;
+
+@Confi
+public class Config {
+
+}

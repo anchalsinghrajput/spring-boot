@@ -1,0 +1,47 @@
+package com.infosys.anchal.services;
+
+import com.infosys.anchal.beans.CustomerDetail;
+import com.infosys.anchal.beans.ProductDetail;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@Service
+public class Electronics {
+
+    private Map<CustomerDetail, List<ProductDetail>> orders = new HashMap<>();
+
+    public void placeOrder(CustomerDetail customer, ProductDetail product) {
+
+        List<ProductDetail> customerOrders = orders.get(customer);
+
+        if (customerOrders == null) {
+            customerOrders = new ArrayList<>();
+            orders.put(customer, customerOrders);
+        }
+
+        customerOrders.add(product);
+    }
+
+    public void displayOrders() {
+        System.out.println("All placed order details : ");
+        System.out.println("==========================================");
+        System.out.println("| Customer   | Age | Product            |");
+        System.out.println("==========================================");
+        
+        for (Map.Entry<CustomerDetail, List<ProductDetail>> entry : orders.entrySet()) {
+            CustomerDetail customer = entry.getKey();
+            List<ProductDetail> customerOrders = entry.getValue();
+            
+            for (ProductDetail product : customerOrders) {
+                System.out.printf("| %-11s| %-4d| %-20s|\n", customer.getCustomerName(), customer.getAge(), product.getProductName());
+            }
+        }
+        
+        System.out.println("==========================================");
+    }
+
+}

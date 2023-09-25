@@ -1,0 +1,22 @@
+package com.infosys.anchal.assignment_02_1;
+
+import com.infosys.anchal.beans.Book;
+import com.infosys.anchal.config.Config;
+import com.infosys.anchal.services.LibraryService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.util.List;
+
+public class App {
+    public static void main(String[] args) {
+        ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+        LibraryService libraryService = context.getBean(LibraryService.class);
+
+        List<Book> allBooks = libraryService.getAllBooks();
+        System.out.println("All Books in the Library:");
+        for (Book book : allBooks) {
+            System.out.println("Book ID: " + book.getBookId() + ", Book Name: " + book.getBookName());
+        }
+    }
+}

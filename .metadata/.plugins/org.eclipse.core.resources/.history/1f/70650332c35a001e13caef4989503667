@@ -1,0 +1,28 @@
+package com.infosys.anchal.services;
+
+import com.infosys.anchal.beans.CustomerDetail;
+import com.infosys.anchal.beans.ProductDetail;
+import org.springframework.stereotype.Service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@Service
+public class Electronics {
+
+    private Map<CustomerDetail, ProductDetail> orders = new HashMap<>();
+    public void placeOrder(CustomerDetail customer, ProductDetail product) {
+        orders.put(customer, product);
+    }
+
+
+    public void displayOrders() {
+        System.out.println("Orders:");
+        for (Map.Entry<CustomerDetail, ProductDetail> entry : orders.entrySet()) {
+            CustomerDetail customer = entry.getKey();
+            ProductDetail product = entry.getValue();
+            System.out.println("Customer: " + customer.getCustomerName() + ", Age: " + customer.getAge() +
+                               ", Product: " + product.getProductName() + ", Quantity: " + product.getQuantity());
+        }
+    }
+}

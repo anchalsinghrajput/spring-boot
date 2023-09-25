@@ -1,0 +1,19 @@
+package com.infosys.anchal.config;
+
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.infosys.anchal.beans.Employee;
+
+@Configuration
+public class Config {
+	
+	@Bean
+	Employee getEmployee() {
+		Employee e = new Employee();
+		e.setEmpId(10);
+		e.setEmpName("Anchal");
+		return e;
+	}
+}

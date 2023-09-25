@@ -1,0 +1,34 @@
+package com.infosys.anchal.config;
+
+import com.infosys.anchal.beans.Book;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Configuration
+@ComponentScan("com.infosys.anchal.beans")
+public class Config {
+
+    @Bean
+    public List<Book> bookList() {
+   
+        List<Book> books = new ArrayList<>();
+        
+        Book book1 = new Book();
+        book1.setBookId(1);
+        book1.setBookName("it ends with us");
+
+        Book book2 = new Book();
+        book2.setBookId(2);
+        book2.setBookName("Veronica");
+
+
+        books.add(book1);
+        books.add(book2);
+
+        return books;
+    }
+}

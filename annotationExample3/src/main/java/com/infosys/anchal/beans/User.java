@@ -1,0 +1,18 @@
+package com.infosys.anchal.beans;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
+
+@Component //Using this we can easily create and add bean to spring container, need less code in comparison to @bean and it is a class level annotation
+@Data
+public class User {
+
+	private String userName;
+	private int mobNo;
+	
+	public void show() {
+		System.out.println("hello show method");
+	}
+}

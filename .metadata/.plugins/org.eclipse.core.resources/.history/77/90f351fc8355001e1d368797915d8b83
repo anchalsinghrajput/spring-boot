@@ -1,0 +1,18 @@
+package com.infosys.anchal.assignments;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+    public static void main(String[] args) {
+        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+        OrderService orderService = (OrderService)context.getBean("orderService");
+        Item item1 = (Item)context.getBean("item1");
+        Item item2 = (Item)context.getBean("item2");
+        orderService.addItem(item1);
+//        orderService.addItem(item2);
+        orderService.placeOrder();
+    }
+}
+
+        
+       

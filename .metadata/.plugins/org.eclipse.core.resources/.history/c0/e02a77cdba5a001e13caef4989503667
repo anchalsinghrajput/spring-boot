@@ -1,0 +1,15 @@
+package com.infosys.anchal.services;
+
+import com.infosys.anchal.beans.Book;
+import java.util.List;
+
+public class LibraryService {
+    private List<Book> bookList;
+
+    // Setter method for injecting the book list
+    public void setBookList(List<Book> bookList) {
+        this.bookList = bookList;
+    }
+
+    // Other methods for managing the book list
+}

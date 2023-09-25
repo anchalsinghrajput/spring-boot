@@ -1,0 +1,25 @@
+package com.infosys.anchal.assignment;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class UniversityServices {
+	
+	private Map<Integer, Student> students = new HashMap();
+	private List<Course> courses = new ArrayList<>();
+
+	
+	public void enrollCourse(int studentId, int courseId) {
+		Student student = students.get(studentId);
+		Course course = courses.get(courseId);
+		
+		if(student != null && course != null) {
+			student.getCourses().add(course);
+			
+		}
+	}
+	
+	
+}

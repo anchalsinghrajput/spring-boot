@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\eclipseJavaSpring\annotationExample3\src\main\java\com\infosys\anchal\config\Config.java"/>
+			<item value="C:\eclipseJavaSpring\assignment_01_3\src\main\java\config.xml"/>
+			<item value="C:\eclipseJavaSpring\assignments\pom.xml"/>
+			<item value="C:\eclipseJavaSpring\01dependency_injection\src\main\java\infosys_traning\dependency_injection\App.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.infosys.anchal.assignment_02_2"/>
+			<item value="com.infosys.anchal.assignment_02_1"/>
+			<item value="com.infosys.anchal.todo_list"/>
+			<item value="com.infosys.anchal.annotationExample3"/>
+			<item value="com.infosys.anchal.annotationExample2"/>
+			<item value="com.infosys.anchal.annotationExample"/>
+			<item value="com.infosys.anchal.assignment"/>
+			<item value="com.infosys.anchal"/>
+		</list>
+		<list key="groupId">
+			<item value="com.infosys.anchal"/>
+		</list>
+		<list key="artifactId">
+			<item value="assignment_02_2"/>
+			<item value="assignment_02_1"/>
+			<item value="todo-list"/>
+			<item value="annotationExample3"/>
+			<item value="annotationExample2"/>
+			<item value="annotationExample"/>
+			<item value="assignment"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

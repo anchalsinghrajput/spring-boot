@@ -1,0 +1,28 @@
+package com.infosys.anchal.config;
+
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.infosys.anchal.beans.Books;
+
+@Configuration
+public class Config {
+	
+	@Bean(name="mybook")
+	Books getBooksObject() {
+		Books b = new Books();
+		b.setBookId(10);
+		b.setBookName("It end with us");
+		return b;
+	}
+	
+	@Bean(name="childrensBook")
+	Books getBooksObject1() {
+		Books b = new Books();
+		b.setBookId(11);
+		b.setBookName("Harry Potter");
+		return b;
+	}
+
+}

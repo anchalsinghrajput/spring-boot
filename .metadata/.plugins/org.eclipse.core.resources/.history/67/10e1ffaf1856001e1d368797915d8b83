@@ -1,0 +1,24 @@
+package com.infosys.anchal.assignment;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+    public static void main(String[] args) {
+        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+
+        UniversityServices universityService = (UniversityServices) context.getBean("universityService");
+
+        universityService.addStudent(context.getBean("student1", Student.class));
+        universityService.addStudent(context.getBean("student2", Student.class));
+        universityService.addCourse(context.getBean("mathCourse", Course.class));
+        universityService.addCourse(context.getBean("csCourse", Course.class));
+
+//        universityService.enrollCourse(1, 1); // Enroll Alice in Mathematics
+        universityService.enrollCourse(1, 0); // Enroll Bob in Computer Science
+
+        
+//        universityService.displayStudentCourses(1);
+//        universityService.displayStudentCourses(2);
+    }
+}
